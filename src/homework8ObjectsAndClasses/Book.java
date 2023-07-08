@@ -15,7 +15,24 @@ public class Book {
     public void setReleaseYear(int releaseYear) {
         this.releaseYear = releaseYear;
     }
-    public Author getAuthorName(Author authorName) {
+    public Author getAuthorName() {
         return this.authorName;
+    }
+    @Override
+    public String toString() {
+        return title + ", " + authorName + ", " + releaseYear;
+    }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book b1 = (Book) other;
+        return authorName.equals(b1.authorName);
+    }
+
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(title, releaseYear, authorName);
     }
 }

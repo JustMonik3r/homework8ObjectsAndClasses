@@ -13,4 +13,12 @@ public class Author {
     public String getSurname() {
         return this.surname;
     }
+    @Override
+    public String toString() {
+        return getName() + " " + getSurname();
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(surname, name);
+    }
 }
