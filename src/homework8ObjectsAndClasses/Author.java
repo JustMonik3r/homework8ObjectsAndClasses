@@ -15,7 +15,22 @@ public class Author {
     }
     @Override
     public String toString() {
-        return getName() + " " + getSurname();
+        return "имя='" + name + '\'' + ", фамилия='" + surname + '\'' + '}';
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        if(other == null){
+            return false;
+        }
+        if(this == other){
+            return true;
+        }
+        Author a1 = (Author) other;
+        return name.equals(a1.name) && surname.equals(a1.surname);
     }
     @Override
     public int hashCode() {

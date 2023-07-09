@@ -26,6 +26,8 @@ public class ObjectsAndClasses {
         System.out.println(kreshenieOgnem.equals(galaktikaVOgne));
         Book bashnyaLastochki = new Book("Башня Ласточки", andrzejSapkowski, 1997);
         System.out.println(kreshenieOgnem.equals(bashnyaLastochki));
+        Book galaxyInFlames = new Book("Галактика в огне", benCounter, 2005);
+        System.out.println(galaktikaVOgne.equals(galaxyInFlames));
 
     }
 }
