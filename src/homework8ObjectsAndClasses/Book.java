@@ -24,15 +24,18 @@ public class Book {
     }
     @Override
     public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
         if(other == null){
             return false;
         }
+
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+
         if(this == other){
             return true;
         }
+
         Book b1 = (Book) other;
         return authorName.equals(b1.authorName) && title.equals(b1.title) && releaseYear == b1.releaseYear;
     }
